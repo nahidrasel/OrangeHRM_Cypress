@@ -1,7 +1,7 @@
 {
   "username": "Admin",
   "password": "admin123",
-  "invalid_username": "Ad",
-  "invalid_password": "123",
+  "invalidUsername": "Ad",
+  "invalidPassword": "123",
   "url":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 }
