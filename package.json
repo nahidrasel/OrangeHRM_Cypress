@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/nahidrasel/OrangeHRM_Cypress#readme",
   "devDependencies": {
-    "cypress": "^12.4.1"
+    "cypress": "^12.5.0"
   },
   "dependencies": {
     "faker": "^5.5.3"
