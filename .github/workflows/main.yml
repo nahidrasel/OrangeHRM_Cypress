@@ -1,4 +1,4 @@
-name: run my OrangeHRM Cypress tests
+name: run OrangeHRM Cypress tests
 on:
   push:
     branches:
@@ -9,14 +9,13 @@ jobs:
   checkout-and-test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo
 
       - name: Check out repository code
         uses: actions/checkout@v3
 
-      - name: run cypress tests with firefox
+      - name: run Orange HRM Cypress tests with Chrome
         uses: cypress-io/github-action@v3
         timeout-minutes: 10
         with:
           browser: chrome
-          headed: true
