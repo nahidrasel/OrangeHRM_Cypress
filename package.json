@@ -1,0 +1,32 @@
+{
+  "name": "orangehrm_cypress",
+  "version": "1.0.0",
+  "description": "OrangeHRM Web Automation With Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy-open": "cypress-open",
+    "cy-run": "cypress-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nahidrasel/OrangeHRM_Cypress.git"
+  },
+  "keywords": [
+    "OrangeHRM",
+    "Cypress",
+    "Web",
+    "Automation"
+  ],
+  "author": "Nahid Mahmud",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nahidrasel/OrangeHRM_Cypress/issues"
+  },
+  "homepage": "https://github.com/nahidrasel/OrangeHRM_Cypress#readme",
+  "devDependencies": {
+    "cypress": "^12.4.1"
+  },
+  "dependencies": {
+    "faker": "^5.5.3"
+  }
+}
