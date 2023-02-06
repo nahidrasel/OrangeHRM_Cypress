@@ -6,16 +6,17 @@ The following document contains setup npm, how to run cypress automation project
 ### Step 1: Clone this Repo 
 > git clone https://github.com/nahidrasel/OrangeHRM_Cypress.git
 
-### Step 2: Assume Node.Js Should be already installed on the Machine or system, otherwise install Node.Js on the machine or system.
-> Go to the Command line on that specific folder where the clone Repo reside. Install npm on that folder, use the following command : npm init.
+### Step 2: Install NodeJs and Cypress
+> https://nodejs.org/en/download/ or already installed on the Machine or system.
+
+> Go to the Command line on that specific folder where the clone Repo reside. **Install npm on that folder**, use the following command : npm init.
 npm init - Install all the up to date dependencies and the configuration files needed for this project.
 
-> Install Cypress by using command:
+> **Install Cypress by using command:**
 npm install cypress
 
 > There are a lot dependencies that are not updated frequently in parallel with cypress. So while installing if you are seeing conflicts use`npm i --force`.
-
-> node_modules folder will be created in the project which will contain all the dependencies of the project and a package-lock.json file will also be created that will contain JSON for all the dependencies.
+node_modules folder will be created in the project which will contain all the dependencies of the project and a package-lock.json file will also be created that will contain JSON for all the dependencies.
 
 ### Step 3: Run Test
 
@@ -26,7 +27,7 @@ When opening this for the first time it will say in the commandline that you are
 
 Click on the E2E configuration and select any browser you like to run the test and click on the **Start E2E testing with**.
 
-In new window you will two spec file. One is for **apispec**(Dummy Test) and another one for **ohrmspec** . Just click on any test you want to run.
+In new window you will have two spec file. One is for **apispec**(Dummy Test) and another one for **ohrmspec** . Just click on any test you want to run.
 
 > Custom commands can be added to interact with Cypress in package.json file under the **scripts** property:
 
