@@ -22,9 +22,9 @@ npm install cypress
 > Open Cypress test runner window by following command:
 npx cypress open
 
-When opening this for the first time it will say in the cmd that you are using cypress *** version first time. You will see a window of cypress GUI.
+When opening this for the first time it will say in the commandline that you are using cypress *** version first time. You will see a window of cypress GUI.
 
-Click on the E2E configuration and select any browser you like to run the test and click on the **Start E2E testing with ***** .
+Click on the E2E configuration and select any browser you like to run the test and click on the **Start E2E testing with**.
 
 In new window you will two spec file. One is for **apispec**(Dummy Test) and another one for **ohrmspec** . Just click on any test you want to run.
 
