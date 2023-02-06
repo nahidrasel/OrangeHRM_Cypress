@@ -1,4 +1,4 @@
-# Orange HRM Web Automation
+# Orange HRM Cypress Web Automation
 Cypress is a next generation front end testing tool built for the modern web. This is a sample project which you can use to start your E2E testing with Cypress.
 ## Introduction
 The following document contains setup npm, how to run cypress automation project of the OrangeHRM demo website.
@@ -35,3 +35,72 @@ npx cypress run
 
 Run Individual Spec Files:
 npx cypress run --spec 'cypress/integration/<path to spec file>'
+
+
+How To Use Cypress.io Page Object Design Pattern Basic Model ( Ready To Use )**
+
+**Step 1**
+**How To Add Page Code ==> Create your individual pages objects with pageName.js in the folder => pageobjects**
+
+```
+
+class homePage{
+
+    elements ={
+        loginBranding : () =>  cy.get('.orangehrm-login-branding'),
+        copyrightTitle : () =>  cy.get('.orangehrm-copyright-wrapper > :nth-child(2)')
+    }
+    visitUrl(Url) {
+    cy.visit(Url)
+    }
+    }
+
+module.exports = new homePage();
+
+```
+**How To Add UI Test Case ==> Create your individual test with name contain spec in it:  uitest.spec.js in the folder =>  e2e**
+**Test case code pattern** in the folder =>  **e2e**
+```
+import homePage from '../pageobjects/homePage'
+describe('Navigate to Orange HRM Web Application Base Page', () => {
+    beforeEach(function () {
+        cy.fixture('userdata').then(userdata => {
+            homePage.visitUrl(userdata.url)
+            homePage.elements.loginBranding().should('be.visible')
+            homePage.elements.copyrightTitle().should('contain', 'OrangeHRM, Inc')
+        })
+    })
+})
+
+```
+**Step 2** 
+**How To Add API Test Case ==> Create your individual test with name contain spec in it:  api.spec.js in the folder =>  e2e**
+
+```
+Cypress.config('baseUrl', Cypress.env('baseUrl'))
+describe('API Testing', () => {
+
+    it('1. Test the GET Method(read) with Response Headers ', () => {
+    cy.request('/api/users?page=2','application/json; charset=utf-8')
+    .then((response) => {
+     expect(response).to.have.property('status', 200)
+     expect(response).to.have.property('headers')
+     expect(response.headers['content-type']).to.include('application/json; charset')
+    })
+    })
+})
+
+```
+ 
+ **Test data is isolated from the test case** in the folder  => **fixtures** using JSON file.
+
+``` 
+{
+  "username": "Admin",
+  "password": "admin123",
+  "invalidUsername": "Ad",
+  "invalidPassword": "123",
+  "url":"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+}
+
+```
