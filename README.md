@@ -22,7 +22,7 @@ npm install cypress
 >Open Cypress test runner window by following command:
 npx cypress open
 
-When opening this for the first time it will say in the cmd thsat you are using cypress *** vesrion first time. You will see a window of cypress GUI.
+When opening this for the first time it will say in the cmd that you are using cypress *** version first time. You will see a window of cypress GUI.
 
 Click on the E2E configuration and select any browser you like to run the test and click on the **Start E2E testing with ***** .
 
@@ -30,13 +30,7 @@ In new window you will two spec file. One is for **apispec**(Dummy Test) and ano
 
 >Custom commands can be added to interact with Cypress in package.json file under the **scripts** property:
 
-To open the Cypress from the command line in GUI mode:
-npx cypress open
-
-Once it open the 
-Run Cypress:
-Helps to run the tests in headless mode on the terminal cy:run : cypress run
+Run Cypress from command to run the tests in headless mode on the terminal npx cypress run 
 
 Run Individual Spec Files:
 npx cypress run --spec 'cypress/integration/<path to spec file>'
-
