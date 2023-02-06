@@ -59,7 +59,7 @@ class homePage{
 module.exports = new homePage();
 
 ```
-**How To Add UI Test Case ==> Create your individual test with name contain spec in it:  uitest.spec.js in the folder =>  e2e**
+> **How To Add UI Test Case ==> Create your individual test with name contain spec in it:  uitest.spec.js in the folder =>  e2e**
 **Test case code pattern** in the folder =>  **e2e**
 ```
 import homePage from '../pageobjects/homePage'
