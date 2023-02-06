@@ -30,7 +30,8 @@ In new window you will two spec file. One is for **apispec**(Dummy Test) and ano
 
 > Custom commands can be added to interact with Cypress in package.json file under the **scripts** property:
 
-Run Cypress from command to run the tests in headless mode on the terminal npx cypress run 
+**Run Cypress from command** to run the tests in headless mode on the terminal:
+npx cypress run 
 
 Run Individual Spec Files:
 npx cypress run --spec 'cypress/integration/<path to spec file>'
