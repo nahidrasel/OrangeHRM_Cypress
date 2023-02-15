@@ -32,5 +32,6 @@
   "dependencies": {
     "faker": "^5.5.3"
   },
+
   "html-report" : "cypress run -- spec <file-path>.js -- browser chrome -- headed"
 }

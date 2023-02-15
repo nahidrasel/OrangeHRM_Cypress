@@ -16,7 +16,7 @@ module.exports = defineConfig({
     html: true,
     inlineAssets: true,
     overwrite: false,
-    json: false
+    json: true
   },
   video: false,
 
