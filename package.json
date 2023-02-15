@@ -24,9 +24,13 @@
   },
   "homepage": "https://github.com/nahidrasel/OrangeHRM_Cypress#readme",
   "devDependencies": {
-    "cypress": "^12.5.0"
+    "cypress": "^12.5.1",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2"
   },
   "dependencies": {
     "faker": "^5.5.3"
-  }
+  },
+  "html-report" : "cypress run -- spec <file-path>.js -- browser chrome -- headed"
 }
