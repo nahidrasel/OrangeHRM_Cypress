@@ -45,7 +45,7 @@ describe('Navigate to Orange HRM Web Application Base Page', () => {
     })
 
     //Checking Invalid Alert and taking screenshots
-    it('4. This test will attempt an Invalid Login and Take Screenshpt', () => {
+    it('4. This test will attempt an Invalid Login and Take Screenshot', () => {
     cy.fixture('userdata').then(userdata => {
 	loginPage.loginValidation(userdata.invalidUsername,userdata.invalidPassword)
 	loginPage.elements.errorAlert().should('be.visible').and('contain', 'Invalid credentials').screenshot()
