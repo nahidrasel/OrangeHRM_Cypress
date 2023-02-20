@@ -105,3 +105,4 @@ describe('API Testing', () => {
 }
 
 ```
+This Framework also support reporting tools which merges both screenshot and test cases into a html file and saves as index.html in the Reporting folder.
