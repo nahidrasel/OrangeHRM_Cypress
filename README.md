@@ -40,7 +40,7 @@ npx cypress run --spec 'cypress/integration/<path to spec file>'
 
 How To Use Cypress.io Page Object Design Pattern Basic Model ( Ready To Use )**
 
-**Step 1**
+**Step 1:**
 **How To Add Page Code ==> Create your individual pages objects with pageName.js in the folder => pageobjects**
 
 ```
@@ -74,7 +74,7 @@ describe('Navigate to Orange HRM Web Application Base Page', () => {
 })
 
 ```
-**Step 2** 
+**Step 2:** 
 **How To Add API Test Case ==> Create your individual test with name contain spec in it:  api.spec.js in the folder =>  e2e**
 
 ```
