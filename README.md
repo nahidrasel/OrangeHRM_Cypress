@@ -23,7 +23,7 @@ node_modules folder will be created in the project which will contain all the de
 > Open Cypress test runner window by following command:
 npx cypress open
 
-When opening this for the first time it will say in the commandline that you are using cypress *** version first time. You will see a window of cypress GUI.
+When opening this for the first time it will say in the command line that you are using cypress *** version first time. You will see a window of cypress GUI.
 
 Click on the E2E configuration and select any browser you like to run the test and click on the **Start E2E testing with**.
 
@@ -105,10 +105,16 @@ describe('API Testing', () => {
 }
 
 ```
-### **Reporting**
+## **Reporting**
 This Framework also support reporting tools which merges both screenshot and test cases into a html file and saves as index.html in the Reporting folder.
-
-> Implement node event listeners in the **cypress.config** file
+    
+### Step 1 : Install mochawesome package. 
+Execute the following command: npm i --save-dev cypress-mochawesome-reporter
+    
+### Step 2 : Change the cypress reporter & setup hooks.
+For this, edit the config file (cypress.config.js by default)
+    
+> Implement node event listeners in the **cypress.config.js** file
 ```
 const { defineConfig } = require("cypress");
 module.exports = defineConfig({
@@ -129,3 +135,18 @@ e2e: {
     },
     
 ```
+    
+### Step 3: Add the following code to your cypress/support/e2e.js file.
+import 'cypress-mochawesome-reporter/register';
+    
+### Step 4: In order to run your test script to generate html report.
+>Go to your package.json file and add the following under scripts:
+```
+“html-report” : “cypress run — — spec <file-path>.js — — browser chrome — — headed”
+```
+    
+**Simple run the following command in terminal:**
+npm run html-report
+    
+This will generate an index.html file under “reports/html”. Open this file in a browser, the html report will be like this:
+![image](https://user-images.githubusercontent.com/53434625/221381208-681f4983-d894-4dd2-acff-09fa9b1439a1.png)
