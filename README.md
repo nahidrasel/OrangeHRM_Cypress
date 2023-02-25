@@ -148,5 +148,5 @@ import 'cypress-mochawesome-reporter/register';
 **Simple run the following command in terminal:**
 npm run html-report
     
-This will generate an index.html file under “reports/html”. Open this file in a browser, the html report will be like this:
+This will generate an index.html file under “reports/html”. Open this file in a browser, the html report will be like this along with **Screenshots** :
 ![image](https://user-images.githubusercontent.com/53434625/221381208-681f4983-d894-4dd2-acff-09fa9b1439a1.png)
