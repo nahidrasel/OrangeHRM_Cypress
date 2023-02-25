@@ -105,5 +105,27 @@ describe('API Testing', () => {
 }
 
 ```
- ## Reporting
+### **Reporting**
 This Framework also support reporting tools which merges both screenshot and test cases into a html file and saves as index.html in the Reporting folder.
+
+> Implement node event listeners in the **cypress.config** file
+```
+const { defineConfig } = require("cypress");
+module.exports = defineConfig({
+  // These settings apply everywhere unless overridden
+  reporter: 'cypress-mochawesome-reporter',
+  reporterOptions: {
+    reportDir: 'cypress/reports',
+    charts: true,
+    embeddedScreenshots: true,
+    html: true,
+    inlineAssets: true,
+    overwrite: false,
+    json: false
+  },
+e2e: {
+    setupNodeEvents(on, config) {
+    require('cypress-mochawesome-reporter/plugin')(on);
+    },
+    
+```
