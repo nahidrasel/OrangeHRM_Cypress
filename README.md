@@ -137,8 +137,9 @@ e2e: {
 ```
     
 ### Step 3: Add the following code to your cypress/support/e2e.js file.
+```
 import 'cypress-mochawesome-reporter/register';
-    
+```
 ### Step 4: In order to run your test script to generate html report.
 >Go to your package.json file and add the following under scripts:
 ```
