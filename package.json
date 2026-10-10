@@ -4,8 +4,9 @@
   "description": "OrangeHRM Web Automation With Cypress",
   "main": "index.js",
   "scripts": {
-    "cy-open": "cypress-open",
-    "cy-run": "cypress-run"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:report": "cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,5 @@
   },
   "dependencies": {
     "faker": "^5.5.3"
-  },
-
-  "html-report" : "cypress run -- spec <file-path>.js -- browser chrome -- headed"
+  }
 }
