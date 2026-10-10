@@ -19,7 +19,7 @@ Avoid `npm init` or `npm install --force` for routine setup; `npm ci` uses the c
 ### Step 3: Run Test
 
 > Open Cypress interactive runner with `npm run cy:open`:
-npx cypress open
+npm run cy:open
 
 When opening this for the first time it will say in the command line that you are using cypress *** version first time. You will see a window of cypress GUI.
 
@@ -32,8 +32,11 @@ In new window you will have two spec file. One is for **apispec**(Dummy Test) an
 **Run Cypress from command** to run the tests in headless mode on the terminal:
 npm run cy:run
 
-Run Individual Spec Files:
-npx cypress run --spec 'cypress/integration/<path to spec file>'
+Run an individual spec file:
+
+```bash
+npx cypress run --spec 'cypress/e2e/<spec-file>.cy.js'
+```
 
 
 How To Use Cypress.io Page Object Design Pattern Basic Model ( Ready To Use )**
@@ -141,11 +144,14 @@ import 'cypress-mochawesome-reporter/register';
 ### Step 4: In order to run your test script to generate html report.
 >Go to your package.json file and add the following under scripts:
 ```
-“html-report” : “cypress run — — spec <file-path>.js — — browser chrome — — headed”
+"cy:report": "cypress run --browser chrome"
 ```
     
-**Simple run the following command in terminal:**
+**Generate the HTML report with:**
+
+```bash
 npm run cy:report
+```
     
 This will generate an index.html file under “reports/html”. Open this file in a browser, the html report will be like this along with **Screenshots** :
 ![image](https://user-images.githubusercontent.com/53434625/221381208-681f4983-d894-4dd2-acff-09fa9b1439a1.png)
